@@ -2,16 +2,17 @@
   "name": "parctice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" : "nodemon/src app.js"
+    "server": "nodemon/src index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "vaibhav",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.11.7"
+    "mongoose": "^5.11.7",
+    "nodemon": "^2.0.6"
   }
 }
