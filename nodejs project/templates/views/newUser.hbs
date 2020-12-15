@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category master with curd opration</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        nav {
+            width: 100vw;
+            background: lightcoral;
+            height: 50px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            line-height: 50px;
+            float: right;
+            margin-right: 20px;
+        }
+
+        form {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid black;
+            border-spacing: 0px;
+            width: 40%;
+        }
+
+        input {
+            font-size: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+            height: 30px;
+        }
+
+        label {
+            font-size: 20px;
+            width: 150px;
+            padding: 5px;
+            display: inline-block;
+
+        }
+
+        .btn {
+            font-size: 20px;
+            width: 100px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index">Product Info</a></li>
+        </ul>
+    </nav>
+
+
+    <form action="/newUser" method="POST">
+
+        <div>
+            <label for="">Category Id</label>
+            <input type="text" name="categoryId" id="categoryId">
+        </div>
+
+        <div>
+            <label for="">Category Name</label>
+            <input type="text" name="categoryName" id="categoryName">
+        </div>
+
+        <div>
+            <label for="">Product Id</label>
+            <input type="text" name="productId" id="productId">
+        </div>
+
+        <div>
+            <label for="">Product Name</label>
+            <input type="text" name="productName" id="productName">
+        </div>
+
+        <div class="form-action-button">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+
+</body>
+
+</html>
