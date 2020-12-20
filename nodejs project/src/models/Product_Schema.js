@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const newUsers = new mongoose.Schema({
+const create_Product = new mongoose.Schema({
     categoryId: {
         type: String,
         required: true
@@ -21,6 +21,6 @@ const newUsers = new mongoose.Schema({
 
 // now need to create a collection
 
-const User = new mongoose.model("User",newUsers);
+const Cre_product = new mongoose.model("ProductInfo", create_Product);
 
-module.exports = User;
+module.exports = Cre_product;

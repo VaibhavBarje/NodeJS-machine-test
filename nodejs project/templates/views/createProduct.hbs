@@ -4,26 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category master with curd opration</title>
+    <title>CreateProduct</title>
     <style>
         * {
             padding: 0px;
             margin: 0px;
-        }
-
-        nav {
-            width: 100vw;
-            background: lightcoral;
-            height: 50px;
-        }
-
-        li a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            line-height: 50px;
-            float: right;
-            margin-right: 20px;
         }
 
         form {
@@ -59,14 +44,9 @@
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index">Product Info</a></li>
-        </ul>
-    </nav>
+    {{>header}}
 
-
-    <form action="/newUser" method="POST">
+    <form action="/createProduct" method="POST">
 
         <div>
             <label for="">Category Id</label>

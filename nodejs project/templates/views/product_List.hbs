@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductInfo</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #Items_Name {
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 100%;
+            height: 30px;
+            margin: 10px 0px;
+            line-height: 25px;
+        }
+
+        #Items_Name::placeholder {
+            padding: 25px;
+        }
+
+        table {
+            border: 1px solid black;
+            border-spacing: 0px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border-bottom: 2px solid #f1f1f1;
+            text-align: left;
+            padding-left: 5px;
+            height: 30px;
+        }
+
+        #Stocks tr.header,
+        #Stocks tr:hover {
+            background-color: #f1f1f1a4;
+        }
+    </style>
+</head>
+
+<body>
+    {{>header}}
+
+    <input type="text" name="" id="Items_Name" placeholder="Enter Product Name..." onkeyup="searchFun()">
+
+    <table id="Stocks">
+        <tr class="header">
+            <th style="width: 25%;">CategoryId</th>
+            <th style="width: 25%;">CategoryName</th>
+            <th style="width: 25%;">ProductId</th>
+            <th style="width: 25%;">ProductName</th>
+        </tr>
+        {{#each records}}
+        <tr>
+            <td>{{categoryId}}</td>
+            <td>{{categoryName}}</td>
+            <td>{{productId}}</td>
+            <td>{{productName}}</td>
+        </tr>
+        {{/each}}
+
+    </table>
+
+    <script>
+
+        const searchFun = () => {
+            let filter = document.getElementById("Items_Name").value.toUpperCase();
+
+            let myTabel = document.getElementById("Stocks");
+
+            let tr = myTabel.getElementsByTagName('tr');
+
+            for (var i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[2];
+
+                if (td) {
+                    let textvalue = td.textContent || td.innerHTML;
+
+                    if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

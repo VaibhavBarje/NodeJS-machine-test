@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    background: lightcoral;
+    height:30px;
+}
+
+nav li {
+    list-style: none;
+    line-height: 30px;
+    margin-left: 20px;
+    width: 90px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover {
+     background: cadetblue;
+}

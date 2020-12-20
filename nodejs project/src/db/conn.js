@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
+const NewUser = require("../models/Product_Schema");
 
-mongoose.connect("mongodb://localhost:27017/practice",{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-    useCreateIndex:true
-}).then(()=>{
-    console.log(`connection successful`);
-}).catch((e)=>{
-    console.log(`no connection`);
-})
+mongoose.connect("mongodb://localhost:27017/ProductItems", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+});
+
