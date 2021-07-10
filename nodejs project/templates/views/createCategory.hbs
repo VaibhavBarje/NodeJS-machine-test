@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreateCategory</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    #creProCategory {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      margin: 20px;
+      padding: 10px;
+      font-size: 20px;
+
+    }
+
+    input {
+      font-size: 15px;
+      height: 25px;
+      margin: 2px 0px 10px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  {{>header}}
+  <form action="/createCategory" method="POST">
+
+    <div id="creProCategory">
+      Name <input type="text" name="cateName" placeholder="Input category name">
+
+      Parent <input type="text" name="cateParent" id="cateParent" placeholder="Input parent of category">
+
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+
+
+</body>
+
+</html>

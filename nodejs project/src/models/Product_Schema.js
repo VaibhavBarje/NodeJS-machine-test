@@ -19,8 +19,15 @@ const create_Product = new mongoose.Schema({
     }
 })
 
-// now need to create a collection
+
+
 
 const Cre_product = new mongoose.model("ProductInfo", create_Product);
-
 module.exports = Cre_product;
+
+
+
+
+
+
+

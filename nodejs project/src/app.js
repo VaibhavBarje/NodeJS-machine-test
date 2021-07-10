@@ -5,6 +5,7 @@ const hbs = require("hbs");
 
 require("./db/conn");
 const create_Product = require("./models/Product_Schema");
+const create_category = require("./models/category_schema");
 var listItems = create_Product.find({});
 
 const { json } = require("express");
@@ -60,6 +61,25 @@ app.post("/createProduct", async (req, res) => {
                 productName: req.body.productName
             })
             const Userpro = await createpro.save();
+            res.status(201).render("index");
+        } else {
+            res.send("pleace input valid value");
+        }
+    } catch (error) {
+        res.status(400).send(error);
+    }
+})
+
+app.post("/createCategory", async (req, res) => {
+    try {
+        const cateName = req.body.cateName;
+        const cateParent = req.body.cateParent;
+        if ({} != null) {
+            const createcate = new create_category({
+                cateName: req.body.cateName,
+                cateParent: req.body.cateParent
+            })
+            const usercate = await createcate.save();
             res.status(201).render("index");
         } else {
             res.send("pleace input valid value");
